@@ -34,6 +34,8 @@ trait PasswordManagementTrait
      */
     public function changePassword()
     {
+    	$this->set('title', __d('CakeDC/Users', 'Change password'));
+    	
         $user = $this->getUsersTable()->newEntity();
         $id = $this->Auth->user('id');
         if (!empty($id)) {

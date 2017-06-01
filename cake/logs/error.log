@@ -11892,3 +11892,180 @@ Stack Trace:
 2017-05-30 00:44:14 Warning: Missing configuration file: "config/permissions.php". Using default permissions
 2017-05-30 00:44:16 Warning: Missing configuration file: "config/permissions.php". Using default permissions
 2017-05-30 01:12:36 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 01:20:49 Error: [PDOException] SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado
+Request URL: /login
+Referer URL: http://localhost/cake/cake/login
+Stack Trace:
+#0 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Database/Driver/PDODriverTrait.php(47): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php(104): Cake\Database\Driver\Mysql->_connect('mysql:host=loca...', Array)
+#2 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Database/Schema/BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Database/Dialect/MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Database/Connection.php(367): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/ORM/Table.php(530): Cake\Database\Connection->getSchemaCollection()
+#8 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/ORM/Query.php(210): Cake\ORM\Table->getSchema()
+#9 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/ORM/Query.php(167): Cake\ORM\Query->addDefaultTypes(Object(CakeDC\Users\Model\Table\UsersTable))
+#10 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/ORM/Table.php(1569): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(CakeDC\Users\Model\Table\UsersTable))
+#11 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/ORM/Table.php(1171): Cake\ORM\Table->query()
+#12 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Auth/BaseAuthenticate.php(159): Cake\ORM\Table->find('auth', Array)
+#13 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Auth/BaseAuthenticate.php(107): Cake\Auth\BaseAuthenticate->_query('superadmin')
+#14 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Auth/FormAuthenticate.php(78): Cake\Auth\BaseAuthenticate->_findUser('superadmin', 'admin')
+#15 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(820): Cake\Auth\FormAuthenticate->authenticate(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /opt/lampp/htdocs/cake/cake/vendor/cakedc/users/src/Controller/Traits/LoginTrait.php(184): Cake\Controller\Component\AuthComponent->identify()
+#17 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Controller/Controller.php(440): CakeDC\Users\Controller\UsersController->login()
+#18 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#19 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(CakeDC\Users\Controller\UsersController))
+#20 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#30 /opt/lampp/htdocs/cake/cake/webroot/index.php(37): Cake\Http\Server->run()
+#31 {main}
+
+
+2017-06-01 01:21:48 Error: [PDOException] SQLSTATE[HY000] [2002] Arquivo ou diretório não encontrado
+Request URL: /users/users/register
+Referer URL: http://localhost/cake/cake/login?redirect=%2FAdmin
+Stack Trace:
+#0 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Database/Driver/PDODriverTrait.php(47): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php(104): Cake\Database\Driver\Mysql->_connect('mysql:host=loca...', Array)
+#2 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Database/Schema/BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Database/Dialect/MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Database/Connection.php(367): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/ORM/Table.php(530): Cake\Database\Connection->getSchemaCollection()
+#8 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/View/Form/EntityContext.php(530): Cake\ORM\Table->getSchema()
+#9 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1279): Cake\View\Form\EntityContext->type('username')
+#10 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1250): Cake\View\Helper\FormHelper->_inputType('username', Array)
+#11 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1075): Cake\View\Helper\FormHelper->_parseOptions('username', Array)
+#12 /opt/lampp/htdocs/cake/cake/vendor/cakedc/users/src/Template/Users/register.ctp(19): Cake\View\Helper\FormHelper->control('username', Array)
+#13 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/View/View.php(1011): include('/opt/lampp/htdo...')
+#14 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/View/View.php(972): Cake\View\View->_evaluate('/opt/lampp/htdo...', Array)
+#15 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/View/View.php(596): Cake\View\View->_render('/opt/lampp/htdo...')
+#16 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Controller/Controller.php(623): Cake\View\View->render(NULL, NULL)
+#17 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(125): Cake\Controller\Controller->render()
+#18 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(CakeDC\Users\Controller\UsersController))
+#19 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#25 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 /opt/lampp/htdocs/cake/cake/webroot/index.php(37): Cake\Http\Server->run()
+#30 {main}
+
+
+2017-06-01 01:22:04 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Phpmyadmin could not be found.
+Exception Attributes: array (
+  'class' => 'Phpmyadmin',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /phpmyadmin
+Stack Trace:
+#0 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /opt/lampp/htdocs/cake/cake/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-06-01 01:23:19 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 01:23:38 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 01:23:43 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 01:23:53 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 01:24:04 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 01:24:08 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 01:30:24 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 01:30:58 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 01:31:03 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 01:31:06 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 01:36:03 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 01:36:07 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 01:36:37 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 01:36:41 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 01:36:43 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 01:37:19 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 01:38:39 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 01:39:38 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 01:39:44 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 01:39:56 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 01:39:59 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 01:42:47 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 02:07:18 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 02:09:53 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 02:10:01 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 02:13:38 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 02:13:40 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /js/pnotify.nonblock.js.map
+Stack Trace:
+#0 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /opt/lampp/htdocs/cake/cake/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-06-01 02:15:25 Warning: Missing configuration file: "config/permissions.php". Using default permissions
+2017-06-01 02:15:26 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /js/pnotify.nonblock.js.map
+Stack Trace:
+#0 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /opt/lampp/htdocs/cake/cake/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /opt/lampp/htdocs/cake/cake/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+

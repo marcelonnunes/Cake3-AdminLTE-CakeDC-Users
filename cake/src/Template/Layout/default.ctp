@@ -60,6 +60,8 @@
         <!-- Theme style -->
         <?php echo $this->Html->css('AdminLTE/AdminLTE.min'); ?>
 
+        <!-- DataTables -->
+        <?php echo $this->Html->css('datatables/dataTables.bootstrap'); ?>
 
         <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
             page. However, you can choose any other skin. Make sure you
@@ -468,7 +470,9 @@
 	<?php echo $this->Html->script('datepicker/bootstrap-datepicker'); ?>
     <?php echo $this->Html->script('datepicker/bootstrap-datepicker.pt-BR'); ?>
 	
-      
+	<!-- DataTables -->
+   	<?php echo $this->Html->script('datatables/dataTables.bootstrap'); ?>
+
 </body>
 
 </html>
