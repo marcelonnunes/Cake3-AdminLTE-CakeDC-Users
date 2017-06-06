@@ -49,10 +49,10 @@
         <?php echo $this->Html->css('bootstrap/bootstrap.min'); ?>
       
         <!-- Font Awesome -->        
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <?php echo $this->Html->css('font-awesome/font-awesome.min'); ?>
         
         <!-- Ionicons -->
-        <?php echo $this->Html->css('font/ionicons.min'); ?>
+        <?php echo $this->Html->css('ioicons/ionicons.min'); ?>
         
         <!-- datepicker	 -->
         <?php echo $this->Html->css('datepicker/datepicker3'); ?>
@@ -69,7 +69,13 @@
          -->
 
         <?php echo $this->Html->css('AdminLTE/skins/skin-blue'); ?>
-
+        
+        <!-- iCheck -->
+        <?php echo $this->Html->css('iCheck/square/blue'); ?>
+        
+        <!-- Social Buttons for Bootstrap -->
+        <?php echo $this->Html->css('bootstrap-social'); ?>
+       
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -471,7 +477,11 @@
     <?php echo $this->Html->script('datepicker/bootstrap-datepicker.pt-BR'); ?>
 	
 	<!-- DataTables -->
-   	<?php echo $this->Html->script('datatables/dataTables.bootstrap'); ?>
+   	<?php echo $this->Html->script('datatables/jquery.dataTables.min'); ?>
+   	<?php echo $this->Html->script('datatables/dataTables.bootstrap.min'); ?>
+   	
+ 	<!-- iCheck -->
+    <?php echo $this->Html->script('iCheck/icheck.min'); ?>
 
 </body>
 

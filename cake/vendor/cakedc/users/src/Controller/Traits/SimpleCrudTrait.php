@@ -29,11 +29,11 @@ trait SimpleCrudTrait
      */
     public function index()
     {
-//     	$this->set('title', __d('CakeDC/Users', 'Edit User'));
+    	$this->set('title', __d('CakeDC/Users', 'List Users'));
     	
         $table = $this->loadModel();
         $tableAlias = $table->alias();
-        $this->set($tableAlias, $this->paginate($table));
+        $this->set($tableAlias, $this->paginate($table,array('maxLimit' => 10)));
         $this->set('tableAlias', $tableAlias);
         $this->set('_serialize', [$tableAlias, 'tableAlias']);
     }
@@ -47,7 +47,7 @@ trait SimpleCrudTrait
      */
     public function view($id = null)
     {
-//     	$this->set('title', __d('CakeDC/Users', 'View User'));
+    	$this->set('title', __d('CakeDC/Users', 'View'));
     	
         $table = $this->loadModel();
         $tableAlias = $table->alias();

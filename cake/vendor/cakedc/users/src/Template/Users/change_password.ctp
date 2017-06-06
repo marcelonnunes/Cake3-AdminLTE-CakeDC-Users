@@ -33,12 +33,12 @@ $this->Html->addCrumb ( __d('CakeDC/Users', 'Please enter the new password'), [
     <?= $this->Form->create($user, array('class'=>'form-horizontal')); ?>
     	
 		<div class="box-body">
-
+			<?php if ($validatePassword) : ?>
 			<div class="form-group">
 				<label for="inputText2" class="col-md-2 control-label"><?php echo __d('CakeDC/Users', 'Current password'); ?></label>
 				<div class="col-sm-4">
 					<div class="input-group">
-						<?php if ($validatePassword) : ?>
+						
 				           <?php
 								echo $this->Form->control ( 'current_password', array (
 										'type' => 'password',
@@ -50,12 +50,12 @@ $this->Html->addCrumb ( __d('CakeDC/Users', 'Please enter the new password'), [
 										'placeholder' => __d('CakeDC/Users', 'Current password')
 								) );
 							?>
-						<?php endif; ?>
+						
 						<span class="input-group-addon"><i class="fa fa-key"></i></span>
 					</div>
 				</div>
 			</div>
-
+			<?php endif; ?>
 			<div class="form-group">
 				<label for="inputText2" class="col-md-2 control-label"><?php echo __d('CakeDC/Users', 'New password'); ?></label>
 				<div class="col-sm-4">

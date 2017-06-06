@@ -7,11 +7,20 @@ $baseDir = dirname($vendorDir);
 
 return array(
     '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
+    'c964ee0ededf28c96ebd9db5099ef910' => $vendorDir . '/guzzlehttp/promises/src/functions_include.php',
+    'a0edc8309cc5e1d60e3047b5df6b7052' => $vendorDir . '/guzzlehttp/psr7/src/functions_include.php',
+    'ea4ce7673810329a8035e47b90292cfc' => $vendorDir . '/eloquent/phony/src/functions.php',
+    '01b65731e0d98a1753ededfbb8f0317a' => $vendorDir . '/eloquent/phony/src/Pho/functions.php',
+    'eca34d0f835b69144b1968bae29eb769' => $vendorDir . '/eloquent/phony/src/Phpunit/functions.php',
+    'a74630ec0c0b24159cc533a7cb92e7fb' => $vendorDir . '/eloquent/phony/src/Simpletest/functions.php',
+    '37a3dc5111fe8f707ab4c132ef1dbc62' => $vendorDir . '/guzzlehttp/guzzle/src/functions_include.php',
     '34122c0574b76bf21c9a8db62b5b9cf3' => $vendorDir . '/cakephp/chronos/src/carbon_compat.php',
+    '5255c38a0faeba867671b61dfda6d864' => $vendorDir . '/paragonie/random_compat/lib/random.php',
     'c720f792236cd163ece8049879166850' => $vendorDir . '/cakephp/cakephp/src/Core/functions.php',
     'ede59e3a405fb689cd1cebb7bb1db3fb' => $vendorDir . '/cakephp/cakephp/src/Collection/functions.php',
     '90236b492da7ca2983a2ad6e33e4152e' => $vendorDir . '/cakephp/cakephp/src/I18n/functions.php',
     'b1fc73705e1bec51cd2b20a32cf1c60a' => $vendorDir . '/cakephp/cakephp/src/Utility/bootstrap.php',
+    'b45b351e6b6f7487d819961fef2fda77' => $vendorDir . '/jakeasmith/http_build_url/src/http_build_url.php',
     '667aeda72477189d0494fecd327c3641' => $vendorDir . '/symfony/var-dumper/Resources/functions/dump.php',
     'e7223560d890eab89cda23685e711e2c' => $vendorDir . '/psy/psysh/src/Psy/functions.php',
 );

@@ -44,13 +44,13 @@ $config = [
         ],
         'reCaptcha' => [
             // reCaptcha key goes here
-            'key' => null,
+        	'key' => '6LcQCiQUAAAAAOihSD9yWKif7m7wlDEivZJrdG5n',
             // reCaptcha secret
-            'secret' => null,
+            'secret' => '6LcQCiQUAAAAAFN7g0bo4et3sPCr2i_EEl65LB-O',
             // use reCaptcha in registration
             'registration' => false,
             // use reCaptcha in login, valid values are false, true
-            'login' => false,
+            'login' => true,
         ],
         'Tos' => [
             // determines if the user should include tos accepted
@@ -58,7 +58,7 @@ $config = [
         ],
         'Social' => [
             // enable social login
-            'login' => false,
+            'login' => true,
             // enable social login
             'authenticator' => 'CakeDC/Users.Social',
         ],

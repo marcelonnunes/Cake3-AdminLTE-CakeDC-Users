@@ -234,4 +234,22 @@ function prd($var){
  * https://github.com/CakeDC/users/blob/master/Docs/Documentation/Installation.md
  * https://github.com/CakeDC/users/blob/master/Docs/Documentation/Extending-the-Plugin.md
  */
+// Configure::write('Users.config', ['users']);
 Plugin::load('CakeDC/Users', ['routes' => true, 'bootstrap' => true]);
+Configure::write('Users.Social.login', true);
+
+Configure::write('OAuth.providers.facebook.options.clientId', 'YOUR APP ID');
+Configure::write('OAuth.providers.facebook.options.clientSecret', 'YOUR APP SECRET');
+
+Configure::write('OAuth.providers.twitter.options.clientId', 'YOUR APP ID');
+Configure::write('OAuth.providers.twitter.options.clientSecret', 'YOUR APP SECRET');
+
+Configure::write('OAuth.providers.instagram.options.clientId', 'YOUR APP ID');
+Configure::write('OAuth.providers.instagram.options.clientSecret', 'YOUR APP SECRET');
+
+// Configure::write('Users.GoogleAuthenticator.login', true);
+
+Configure::write('OAuth.providers.google.options.clientId', 'YOUR APP ID');
+Configure::write('OAuth.providers.google.options.clientSecret', 'YOUR APP SECRET');
+
+

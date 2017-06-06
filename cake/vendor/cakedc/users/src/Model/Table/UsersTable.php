@@ -84,7 +84,7 @@ class UsersTable extends Table
             'on' => ['create', 'update'],
             'allowEmpty' => false
         ]);
-
+        
         return $validator;
     }
 
