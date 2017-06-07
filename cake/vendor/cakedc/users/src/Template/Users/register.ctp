@@ -9,6 +9,7 @@
  * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 use Cake\Core\Configure;
+$this->loadHelper('Form', ['templates' => 'app_form']);
 ?>
 
 <body class="hold-transition register-page">
@@ -73,7 +74,7 @@ use Cake\Core\Configure;
 						'label' => false,
 						'div' => false,
 						'placeholder' => __d ( 'CakeDC/Users', 'Password' ),
-						'class' => array ('form-control')
+						'class' => 'form-control'
 				) );
 			?>
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
@@ -86,7 +87,7 @@ use Cake\Core\Configure;
 	           		'label' => false,
 	           		'div' => false,
 	           		'placeholder' => __d ( 'CakeDC/Users', 'Confirm password' ),
-	           		'class' => array ('form-control'),
+	           		'class' => 'form-control',
 	           ) );
 			?>
       	<span class="glyphicon glyphicon-log-in form-control-feedback"></span>
@@ -130,6 +131,14 @@ use Cake\Core\Configure;
 </div>
 <!-- /.register-box -->
 
+
+
+<div class="form-group has-error">
+                  <label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i> Input with
+                    error</label>
+                  <input type="text" class="form-control" id="inputError" placeholder="Enter ...">
+                  <span class="help-block">Help block with error</span>
+                </div>
 
 <script>
   $(function () {

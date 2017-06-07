@@ -8,7 +8,7 @@
  * @copyright Copyright 2010 - 2017, Cake Development Corporation (https://www.cakedc.com)
  * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-
+$this->loadHelper('Form', ['templates' => 'app_form']);
 $this->Html->addCrumb ( __d('CakeDC/Users', 'Please enter the new password'), [
 		'plugin' => 'CakeDC/Users', 
 		'controller' => 'Users', 
@@ -34,6 +34,7 @@ $this->Html->addCrumb ( __d('CakeDC/Users', 'Please enter the new password'), [
     	
 		<div class="box-body">
 			<?php if ($validatePassword) : ?>
+					
 			<div class="form-group">
 				<label for="inputText2" class="col-md-2 control-label"><?php echo __d('CakeDC/Users', 'Current password'); ?></label>
 				<div class="col-sm-4">
@@ -44,14 +45,11 @@ $this->Html->addCrumb ( __d('CakeDC/Users', 'Please enter the new password'), [
 										'type' => 'password',
 										'label' => false,
 										'div' => false,
-										'class' => array (
-												'form-control' 
-										),
+										'class' => 'form-control',
 										'placeholder' => __d('CakeDC/Users', 'Current password')
 								) );
 							?>
-						
-						<span class="input-group-addon"><i class="fa fa-key"></i></span>
+						<span class="input-group-addon"><i class="fa fa-lock"></i></span>
 					</div>
 				</div>
 			</div>
@@ -65,9 +63,7 @@ $this->Html->addCrumb ( __d('CakeDC/Users', 'Please enter the new password'), [
 									'type' => 'password',
 									'label' => false,
 									'div' => false,
-									'class' => array (
-											'form-control' 
-									),
+									'class' => 'form-control',
 									'placeholder' => __d('CakeDC/Users', 'New password')
 							) );
 						?>
@@ -85,9 +81,7 @@ $this->Html->addCrumb ( __d('CakeDC/Users', 'Please enter the new password'), [
 									'type' => 'password',
 									'label' => false,
 									'div' => false,
-									'class' => array (
-											'form-control' 
-									),
+									'class' => 'form-control',
 									'placeholder' => __d('CakeDC/Users', 'Confirm password')
 							) );
 						?>
