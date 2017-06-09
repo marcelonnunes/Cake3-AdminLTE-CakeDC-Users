@@ -9,7 +9,7 @@
  * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 use Cake\Core\Configure;
-$this->loadHelper('Form', ['templates' => 'app_form']);
+// $this->loadHelper('Form', ['templates' => 'app_form']);
 ?>
 
 <body class="hold-transition register-page">
@@ -101,27 +101,23 @@ $this->loadHelper('Form', ['templates' => 'app_form']);
 	      ?>
 		</div>
 	
-      <div class="row">
-        <div class="col-xs-8">
-          <div class="checkbox icheck">
-            <label>
+      <div class="row form-inline">
+	        <div class="col-xs-8">
 	           	<?php
 		           if (Configure::read('Users.Tos.required')) {
 		           		echo $this->Form->control('tos', [
 		           				'type' => 'checkbox', 
-		           				'label' => __d('CakeDC/Users', 'Accept TOS conditions?'), 
+		           				'label' => __d('CakeDC/Users', 'Accept TOS conditions?'),
 		           				'required' => true,
 		           				'div' => false]);
 		           }
 				?>
-            </label>
-          </div>
-        </div>
-        <!-- /.col -->
-        <div class="col-xs-4">
-          <?= $this->Form->button(__d('CakeDC/Users', 'Submit'),array('class'=>'btn btn-primary btn-block btn-flat')) ?>
-        </div>
-        <!-- /.col -->
+	        </div>
+	        <!-- /.col -->
+	        <div class="col-xs-4">
+	          <?= $this->Form->button(__d('CakeDC/Users', 'Submit'),array('class'=>'btn btn-primary btn-block btn-flat')) ?>
+	        </div>
+	        <!-- /.col -->
       </div>
     <?= $this->Form->end() ?>
 	<br>
@@ -131,14 +127,6 @@ $this->loadHelper('Form', ['templates' => 'app_form']);
 </div>
 <!-- /.register-box -->
 
-
-
-<div class="form-group has-error">
-                  <label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i> Input with
-                    error</label>
-                  <input type="text" class="form-control" id="inputError" placeholder="Enter ...">
-                  <span class="help-block">Help block with error</span>
-                </div>
 
 <script>
   $(function () {

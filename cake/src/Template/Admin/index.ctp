@@ -3,8 +3,51 @@ $this->Html->addCrumb ( "Index", [
 		'controller' => 'Admin',
 		'action' => 'index' 
 ] );
-
+$this->loadHelper('Form', ['templates' => 'app_form']);
 ?>
+<div class="box box-success">
+
+<div class="form-horizontal">
+
+<div class="box-body">
+
+<?php
+	echo $this->Form->control ( 'current_password', array (
+			'type' => 'text',
+			'label' => 'teste de label',
+			'templateVars' => ['md' => 'col-sm-6'],
+			'placeholder' => __d('CakeDC/Users', 'Current password')
+	) );
+// echo $this->Form->control ( 'current_password', array () );
+?>
+
+<div class="form-group">
+	<label for="first_name" class="col-md-2 control-label">Nome</label>
+	<div class="col-sm-5">
+			<input type="text" name="first_name" class="form-control"placeholder="Nome" maxlength="50" id="first-name">
+	</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class="form-group">
+	<label for="inputText2" class="col-md-2 control-label">Senha atual</label>
+	<div class="col-sm-4">
+		<div class="input-group">
+			<input type="password" name="current_password" class="form-control"
+				placeholder="Senha atual" id="current-password"> <span
+				class="input-group-addon"><i class="fa fa-lock"></i></span>
+		</div>
+	</div>
+</div>
+
+
+
+
+
 <!-- Main content -->
 <section class="content">
 	<div class="row">
